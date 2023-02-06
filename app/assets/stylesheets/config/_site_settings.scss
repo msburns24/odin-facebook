@@ -5,3 +5,16 @@ $color-3: #001b2b;
 
 // Fonts
 $site-font: 1;
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('Montserrat-Medium.ttf');
+}
+
+
+// Sizing
+$form-radius: 0.5rem;
