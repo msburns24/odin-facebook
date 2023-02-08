@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
-  get 'comments/create'
-  get 'comments/update'
-  get 'comments/delete'
   root "posts#index"
 
+  devise_for :users
   get "users", to: "users#index"
   get ":username", to: "users#show", as: "user"
   get ":username/edit", to: "users#edit"
-  resources :posts
 
-  devise_for :users
+  resources :posts do
+    resources :comments, only [:create, :update, :delete]
+  end
 end
