@@ -1,0 +1,15 @@
+.user-fullname {
+  font-size: 1.2rem;
+  &.fullname-lg {
+    font-size: 1.6rem;
+  }
+}
+
+.user-username {
+  font-size: 0.9rem;
+  color: $color-5;
+
+  &.username-lg {
+    font-size: 1.2rem;
+  }
+}

@@ -2,10 +2,10 @@
 $color-1: #0e3d8b;
 $color-2: #a61651;
 $color-3: #001b2b;
+$color-4: #eee;
+$color-5: #888;
 
-// Fonts
-$site-font: 1;
-
+// Imported Fonts
 @font-face {
     font-family: 'Montserrat-Light';
     src: url('Montserrat-Light.ttf');
@@ -14,7 +14,20 @@ $site-font: 1;
     font-family: 'Montserrat-Medium';
     src: url('Montserrat-Medium.ttf');
 }
+@font-face {
+    font-family: 'Montserrat-ExtraLight';
+    src: url('Montserrat-ExtraLight.ttf');
+}
+
+// Site Fonts
+$font-body: Montserrat-Medium;
+$font-heading: Montserrat-Light;
 
 
 // Sizing
 $form-radius: 0.5rem;
+
+// Box Shadows
+$box-shadow-std-dist: 0.5rem;
+$box-shadow-std: 0 0 $box-shadow-std-dist calc(#{$box-shadow-std-dist} / 2) #333;
+$box-shadow-lt: 0 0 $box-shadow-std-dist calc(#{$box-shadow-std-dist} / 2) #ddd;

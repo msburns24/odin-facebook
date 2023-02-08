@@ -1,0 +1,13 @@
+<div class="post-container">
+  <div class="post-top">
+    <%= image_tag post.user.profile_picture, class: "profile-pic profile-sm" %>
+    <div class="user-header">
+      <div class="user-fullname"><%= post.user.full_name %></div>
+      <div class="user-username">@<%= post.user.username %></div>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <%= post.content %>
+  </div>
+</div>

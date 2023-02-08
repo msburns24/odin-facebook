@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% unless params[:controller][0..5] == "devise"  %>
+      <header>
+        <%= render "layouts/navbar" %>
+      </header>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,0 +1,9 @@
+.profile-pic {
+  border-radius: 100rem;
+  &.profile-lg { 
+    height: 15rem; 
+    box-shadow: $box-shadow-lt;
+    border: 0.25rem solid $color-4;
+  }
+  &.profile-sm { height: 3rem; }
+}

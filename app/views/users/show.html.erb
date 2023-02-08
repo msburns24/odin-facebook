@@ -1,2 +1,32 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="user-profile">
+  <div class="profile-sidebar">
+    <div class="profile-hdr">
+      <%= image_tag @user.profile_picture, class: "profile-pic profile-lg" %>
+      <div class="profile-title">
+        <div class="user-fullname fullname-lg">
+          <%= @user.full_name %>
+        </div>
+        <div class="user-username username-lg">
+          @<%= @user.username %>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <ul>
+        <li>
+          <%= link_to "Posts", @user %>
+        </li>
+        <li>
+          <%= link_to "About", user_about_path(@user) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="user-posts">
+    <% @user.posts.each do |post| %>
+      <%= render "posts/post", post: post %>
+    <% end %>
+  </div>
+</div>
