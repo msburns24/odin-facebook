@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+require 'randomuser'
+
+users = RandomUser.generate(nationality: "us", number: 30)
+
+users.each do |user|
+  User.create(
+    first_name: user["name"]["first"],
+    last_name: user["name"]["last"],
+    email: user["email"],
+    username: user["login"]["username"],
+    password: user["login"]["password"],
+    profile_picture: user["picture"]["large"]
+  )
+end
+
+puts "Created #{users.length} users."

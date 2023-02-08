@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get ":username/edit", to: "users#edit"
 
   resources :posts do
-    resources :comments, only [:create, :update, :delete]
+    resources :comments, only: [:create, :update, :delete]
   end
 end

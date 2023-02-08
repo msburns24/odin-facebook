@@ -4,12 +4,14 @@ ruby "3.2.0"
 
 gem "bootsnap", require: false
 gem "devise"
+gem 'faker'
 gem 'happy_gemfile'
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
+gem 'randomuser'
 gem "sassc-rails"
 gem "sprockets-rails"
 gem "stimulus-rails"
