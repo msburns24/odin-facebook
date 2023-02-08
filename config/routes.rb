@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-  get 'posts/show'
-  get 'posts/new'
-  get 'posts/create'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'comments/create'
+  get 'comments/update'
+  get 'comments/delete'
+  root "posts#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "users", to: "users#index"
+  get ":username", to: "users#show", as: "user"
+  get ":username/edit", to: "users#edit"
+  resources :posts
 
   devise_for :users
 end
