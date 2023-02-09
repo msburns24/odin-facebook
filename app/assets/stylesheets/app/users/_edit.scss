@@ -4,9 +4,20 @@
     margin-bottom: 1rem;
   }
 
-  input {
+  input[type="text"], input[type="email"], input[type="password"] {
     border-bottom: 1px solid $color-6;
     width: 100%;
     padding: 0.25rem;
+  }
+
+  button, input[type="submit"] {
+    max-width: 10rem;
+  }
+
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }

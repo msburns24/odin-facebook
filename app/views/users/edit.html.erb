@@ -3,30 +3,61 @@
   
   <div class="user-edit-form">
     <div class="title">Edit Profile</div>
-
     <%= form_with model: @user do |f| %>
       <table>
         <tr>
           <th><%= f.label :email %></th>
-          <td><%= f.email_field :email %></td>
+          <td>
+            <%= f.email_field :email %>
+            <% @user.errors.full_messages_for(:email).each do |msg| %>
+              <div class="error-msg danger"><%= msg %></div>
+            <% end %>
+          </td>
         </tr>
         <tr>
           <th><%= f.label :username %></th>
-          <td><%= f.text_field :username %></td>
+          <td>
+            <%= f.text_field :username %>
+            <% @user.errors.full_messages_for(:username).each do |msg| %>
+              <div class="error-msg danger"><%= msg %></div>
+            <% end %>
+          </td>
         </tr>
         <tr>
           <th><%= f.label :password %></th>
-          <td><%= f.password_field :password %></td>
+          <td>
+            <%= f.password_field :password %>
+            <% @user.errors.full_messages_for(:password).each do |msg| %>
+              <div class="error-msg danger"><%= msg %></div>
+            <% end %>
+          </td>
         </tr>
         <tr>
           <th><%= f.label :first_name %></th>
-          <td><%= f.text_field :first_name %></td>
+          <td>
+            <%= f.text_field :first_name %>
+            <% @user.errors.full_messages_for(:first_name).each do |msg| %>
+              <div class="error-msg danger"><%= msg %></div>
+            <% end %>
+          </td>
         </tr>
         <tr>
           <th><%= f.label :last_name %></th>
-          <td><%= f.text_field :last_name %></td>
+          <td>
+            <%= f.text_field :last_name %>
+            <% @user.errors.full_messages_for(:last_name).each do |msg| %>
+              <div class="error-msg danger"><%= msg %></div>
+            <% end %>
+          </td>
         </tr>
       </table>
+
+      <div class="actions">
+        <%= f.submit "Update Profile", class: "btn-primary btn-small" %>
+        <div class="delete-account">
+          Unhappy? <%= link_to "Delete account", user_destroy_path(@user) %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

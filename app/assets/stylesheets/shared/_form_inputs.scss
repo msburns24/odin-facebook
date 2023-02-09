@@ -10,3 +10,11 @@ input {
         color: transparent;
     }
 }
+
+.error-msg {
+    margin-top: 0.5rem;
+}
+
+.field_with_errors > input {
+    border-color: $danger !important;
+}
