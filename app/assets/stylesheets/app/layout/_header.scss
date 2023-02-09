@@ -1,6 +1,6 @@
 header {
   background-color: $color-1;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
   box-shadow: $box-shadow-std;
   color: white;
   margin-bottom: $box-shadow-std-dist;
@@ -9,6 +9,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  a { 
+    text-decoration: none;
+    color: inherit;
+    user-select: none;
   }
 
   .logo.hdr-logo {

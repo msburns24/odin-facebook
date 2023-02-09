@@ -2,6 +2,8 @@
   border: none;
   background-color: $color-1;
   color: white;
+  border-radius: $form-radius;
+  letter-spacing: 1px;
   transition: background-color 0.25s ease;
   &:hover { background-color: $color-3; }
 }
@@ -11,5 +13,16 @@
   font-size: 1.1rem;
   border-radius: $form-radius;
   font-family: 'Montserrat-Light';
-  letter-spacing: 1px;
+}
+
+.btn-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat-Medium';
+}
+
+.btn-small {
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-family: 'Montserrat-Medium';
 }

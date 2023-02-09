@@ -1,5 +1,17 @@
-<%= image_tag user.profile_picture %>
-<ul>
-  <li><%= user.first_name %> <%= user.last_name %></li>
-  <li><%= user.username %></li>
-</ul>
+<div class="user-container">
+  <div class="user-info">
+    <%= image_tag user.profile_picture, class: "profile-pic profile-sm" %>
+    <div class="profile-title">
+      <div class="user-fullname fullname-sm">
+        <%= link_to user.full_name, user %>
+      </div>
+      <div class="user-username username-sm">
+        @<%= link_to user.username, user %>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-actions">
+    <%= button_to "Add Friend", "#", class: "btn-primary btn-small" %>
+  </div>
+</div>

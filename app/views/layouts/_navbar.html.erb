@@ -1,14 +1,13 @@
 <div class="container">
   <div class="hdr-left">
+   
     <div class="logo hdr-logo">
-      Rails Facebook
+      <%= link_to root_url do %>
+        Rails Facebook
+      <% end %>
     </div>
   </div>
   <div class="hdr-right">
-    <% if Rails.env.development? %>
-      <div id="debug-params">
-        <%= debug(params) if Rails.env.development? %>
-      </div>
-    <% end %>
+    <%= link_to "Users", users_path %>
   </div>
 </div>
