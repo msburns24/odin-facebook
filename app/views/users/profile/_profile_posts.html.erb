@@ -1,0 +1,5 @@
+<div class="user-posts">
+  <% @user.posts.each do |post| %>
+    <%= render "posts/post", post: post %>
+  <% end %>
+</div>

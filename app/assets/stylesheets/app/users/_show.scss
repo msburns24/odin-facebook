@@ -1,7 +1,13 @@
 .user-profile {
+  flex: 1;
+
   display: flex;
   justify-content: flex-start;
   gap: 2rem;
+
+  & > div + div {
+    margin-top: 1rem;
+  }
 
   .user-posts {
     flex: 1;
@@ -40,6 +46,30 @@
 
       transition: color 0.25s ease;
       &:hover { color: black; }
+    }
+  }
+
+  .user-about {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    table {
+      flex: 1;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: $box-shadow-lt;
+
+      th, td {
+        padding: 1.5rem;
+        border-bottom: 2px solid $color-4;
+      }
+
+      th {
+        text-align: left;
+        width: 20%;
+      }
     }
   }
 }
