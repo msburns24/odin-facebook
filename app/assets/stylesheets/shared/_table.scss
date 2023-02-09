@@ -1,0 +1,16 @@
+table {
+  flex: 1;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: $box-shadow-lt;
+
+  th, td {
+    padding: 1.5rem;
+    border-bottom: 2px solid $color-4;
+  }
+
+  th {
+    text-align: left;
+    width: 20%;
+  }
+}
