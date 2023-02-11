@@ -1,0 +1,18 @@
+img.like-btn {
+  height: 1.25rem;
+  opacity: 0.3;
+  margin-right: 1rem;
+
+  transition: all 0.15s ease;
+  &:hover {
+    opacity: 1;
+    // To calculate filter to get certain hex, visit: https://codepen.io/sosuke/pen/Pjoqqp
+    filter: invert(17%) sepia(50%) saturate(3264%) hue-rotate(205deg) brightness(94%) contrast(93%);
+  }
+
+  &.liked {
+    opacity: 1;
+    // To calculate filter to get certain hex, visit: https://codepen.io/sosuke/pen/Pjoqqp
+    filter: invert(17%) sepia(50%) saturate(3264%) hue-rotate(205deg) brightness(94%) contrast(93%);
+  }
+}

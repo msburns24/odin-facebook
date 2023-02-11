@@ -10,10 +10,6 @@
     flex: 1;
   }
 
-  .user-posts {
-    flex: 1;
-  }
-
   .profile-hdr {
     display: flex;
     flex-direction: column;
@@ -42,9 +38,6 @@
     }
 
     a {
-      color: inherit;
-      text-decoration: none;
-
       transition: color 0.25s ease;
       &:hover { color: black; }
     }

@@ -1,3 +1,5 @@
+<% post = Post.new(user_id: User.first.id) %>
+
 <div class="post-container">
   <div class="post-top">
     <%= link_to post.user do %>
@@ -15,17 +17,18 @@
   </div>
 
   <div class="post-body">
-    <%= post.content %>
-  </div>
 
-  <div class="post-likes">
-    <%= image_tag "icons/like-black.svg", class: "like-btn" %>
-    <%= pluralize(post.likes.count, "like") %>
-  </div>
+    <%= form_with model: post do |f| %>
+      <%= f.hidden_field :user_id, value: post.user.id %>
+      
+      <div class="field">
+        <%= f.text_area :content, placeholder: "What's on your mind?" %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit "Post", class: "btn-primary btn-small" %>
+      </div>
+    <% end %>
 
-  <% unless params["action"] == "show" %>
-    <div class="actions">
-      <%= link_to "Show this post", post %>
-    </div>
-  <% end %>
+  </div>
 </div>
