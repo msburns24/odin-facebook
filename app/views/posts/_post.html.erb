@@ -19,8 +19,8 @@
   </div>
 
   <div class="post-likes">
-    <%= image_tag "icons/like-black.svg", class: "like-btn" %>
-    <%= pluralize(post.likes.count, "like") %>
+    <%= image_tag("icons/like-black.svg", class: "like-btn") %>
+    <%# <%= pluralize(post.likes.count, "like") %> %>
   </div>
 
   <% unless params["action"] == "show" %>

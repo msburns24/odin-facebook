@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'likes/delete'
   root "posts#index"
 
+  # Users Paths
   devise_for :users
   get "users", to: "users#index"
   get ":username", to: "users#show", as: "user"
