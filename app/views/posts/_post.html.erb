@@ -19,8 +19,11 @@
   </div>
 
   <div class="post-likes">
-    <%= image_tag("icons/like-black.svg", class: "like-btn") %>
-    <%# <%= pluralize(post.likes.count, "like") %> %>
+    <%= link_to image_tag("icons/like-black.svg", class: "like-btn"),
+        likes_path(
+          like: { user_id: test_current_user.id, likable_id: post.id, likable_type: 'Post' }
+        ), data: { 'turbo-method' => :post } %>
+    <%= pluralize(post.likes.count, "like") %>
   </div>
 
   <% unless params["action"] == "show" %>
