@@ -1,6 +1,7 @@
 input {
     border: none;
     outline: none;
+    box-sizing: border-box;
     font-size: 1rem;
     letter-spacing: 1px;
     position: relative;
@@ -8,6 +9,16 @@ input {
 
     &:focus::placeholder {
         color: transparent;
+    }
+
+    &.inline-textarea {
+        background-color: #eee;
+        height: 2rem;
+        border: 1px solid $color-6;
+        border-radius: 10rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.88rem;
+        overflow: hidden;
     }
 }
 

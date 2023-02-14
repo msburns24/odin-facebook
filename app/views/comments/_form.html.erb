@@ -1,0 +1,11 @@
+<div class="comment">
+  <%= image_tag test_current_user.profile_picture, class: "profile-pic profile-very-sm" %>
+  <%= form_with model: [post, comment], class: "comment-form" do |f| %>
+    <%= f.hidden_field :post_id, value: post.id %>
+    <%= f.hidden_field :user_id, value: test_current_user.id %>
+    <%= f.text_field :content, placeholder: "Write a comment...", class: "inline-textarea" %>
+    <div class="send-btn">
+      <%= image_submit_tag "icons/send-white.svg" %>
+    </div>
+  <% end %>
+</div>

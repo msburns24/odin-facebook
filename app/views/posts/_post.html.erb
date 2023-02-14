@@ -18,7 +18,7 @@
     <%= post.content %>
   </div>
 
-  <div class="post-likes">
+  <div class="post-measures">
     <%= link_to image_tag("icons/like-black.svg", class: "like-btn"),
         likes_path(
           like: { user_id: test_current_user.id, likable_id: post.id, likable_type: 'Post' }
@@ -31,4 +31,9 @@
       <%= link_to "Show this post", post %>
     </div>
   <% end %>
+
+  <div class="comments-container">
+    <%= render post.comments %>
+    <%= render "comments/form", post: post, comment: post.comments.new %>
+  </div>
 </div>

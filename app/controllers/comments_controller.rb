@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post
     else
-      redirect_to @post, status: :unpressable_entity
+      redirect_to @post, status: :unprocessable_entity
     end
   end
 
@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to @post
     else
-      redirect_to @post, status: :unpressable_entity
+      redirect_to @post, status: :unprocessable_entity
     end
   end
 

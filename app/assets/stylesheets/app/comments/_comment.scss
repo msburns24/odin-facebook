@@ -1,0 +1,60 @@
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0.5rem;
+
+  img {
+    flex: none;
+  }
+
+  .comment-content {
+    flex: none;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    height: 2rem;
+    border: 1px solid $color-6;
+    border-radius: 10rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    color: $color-3;
+    overflow: hidden;
+  }
+
+  form.comment-form {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    input[type="text"]   { flex: 1; }
+    input[type="image"]  { 
+      height: 1.3rem;
+    }
+
+    .send-btn {
+      flex: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 2rem;
+      width: 2rem;
+      background-color: $color-5;
+      border-radius: 10rem;
+    }
+  }
+}
